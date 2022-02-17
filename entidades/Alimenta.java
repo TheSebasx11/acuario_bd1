@@ -12,12 +12,12 @@ public class Alimenta {
     
     private String fecha;
     private float precioalimento;
-    private int iespecie, idestanque, idalimento, racion;
+    private int idespecie, idestanque, idalimento, racion;
 
     public Alimenta(String fecha, float precioalimento, int iespecie, int idestanque, int idalimento, int racion) {
         this.fecha = fecha;
         this.precioalimento = precioalimento;
-        this.iespecie = iespecie;
+        this.idespecie = iespecie;
         this.idestanque = idestanque;
         this.idalimento = idalimento;
         this.racion = racion;
@@ -39,12 +39,12 @@ public class Alimenta {
         this.precioalimento = precioalimento;
     }
 
-    public int getIespecie() {
-        return iespecie;
+    public int getIDespecie() {
+        return idespecie;
     }
 
     public void setIespecie(int iespecie) {
-        this.iespecie = iespecie;
+        this.idespecie = iespecie;
     }
 
     public int getIdestanque() {

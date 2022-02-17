@@ -12,7 +12,7 @@ public class Proveedor {
     private String nombre, telefono;
     private int idproveedor;
 
-    public Proveedor(String nombre, String telefono, int idproveedor) {
+    public Proveedor(int idproveedor,String nombre, String telefono) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.idproveedor = idproveedor;
