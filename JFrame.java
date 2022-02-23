@@ -7,7 +7,6 @@ package acuario_bd1;
 import acuario_bd1.entidades.*;
 
 import java.util.ArrayList;
-import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -36,7 +35,7 @@ public class JFrame extends javax.swing.JFrame {
 
     //operaciones con Especie
     public ArrayList<Especie> LlenarEspecie() {
-        ArrayList<Especie> ListaEspecie = new ArrayList<Especie>();
+        ArrayList<Especie> ListaEspecie = new ArrayList<>();
         try {
             ope.setSelect("*", "especie");
             ope.setSt(con.getConexion().prepareStatement(ope.getSelect()));
@@ -62,7 +61,6 @@ public class JFrame extends javax.swing.JFrame {
             DTM.setRowCount(fila + 1);
             DTM.setValueAt(esp.getIdespecie(), fila, 0);
             DTM.setValueAt(esp.getDescripcion(), fila, 1);
-
         }
         //System.out.println(jTable1.getColumnCount());
     }
@@ -86,10 +84,11 @@ public class JFrame extends javax.swing.JFrame {
             ope.getSt().setString(2, desc);
             int update = ope.getSt().executeUpdate();
             JOptionPane.showMessageDialog(null, "Agregado con exito");
+            ope = new Operaciones();
         } catch (Exception e) {
             System.out.println(e);
         }
-        ope = new Operaciones();
+
     }
 
     private void EditarEspecie(String oldID, String id, String desc) {
@@ -2046,6 +2045,7 @@ public class JFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void mostrar_espActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrar_espActionPerformed
