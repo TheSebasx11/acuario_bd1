@@ -779,6 +779,7 @@ public class JFrame extends javax.swing.JFrame {
         combo_especie2 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         mostrar_esp.setText("Mostrar");
         mostrar_esp.addActionListener(new java.awt.event.ActionListener() {
